@@ -1,83 +1,32 @@
-.games-list li { background: rgba(140, 199, 255, 0.63); font-weight:500;}
-.games-list li:nth-child(odd) { background: rgba(244, 244, 244, 0.41); }
-.games-list li .btn {margin-top:-5px;}
- 
-#wrapper {
-  border: 1px solid black;
-  width: 450px;
-  height: 450px;
-  margin: 0 auto;
-}
- 
-div {
-  contentEditable: true;
-}
- 
-.filled {
-  width: 28px;
-  height: 28px;
-  background: black;
-  border: 1px solid black;
-  padding: 0;
-  margin: 0;
-  float: left;
-}
- 
-.empty {
-  width: 28px;
-  height: 28px;
-  border: 1px solid black;
-  padding: 0;
-  margin: 0;
-  float: left;
-}
- 
-.numbered {
-  counter-increment: value;
-}
- 
-.numbered:nth-of-type(n)::before {
-  content: counter(value);
-  font-size: 10px;
-  position: absolute;
-}
- 
-table{
-  border:2px solid #3b3a6e;
- 
-}
-table td {
-  position:relative;
-  border:1px solid #3b3a6e;
-  
-}
- 
- 
-.player-line{
-   font-size:20px; 
-   line-height:80px;
-   margin:5px;
-}
- 
-.coords{
-  top:0;
-  left:0;
-   position: absolute; 
-   z-index: 999;
-    font-size: 10px;
-  color: rgb(120, 120, 200);
-}
- 
- 
-.player-badge{
-  display:block;
-  margin-right:15px;
-}
- 
-.creator-color {
-  background-color: #00ABD0;
-}
- 
-.opponent-color {
-  background-color: #FF4C22;
-}
+/* css patch 1 */
+/* This should make the top banner of each page look presentable*/
+/* There are still things to be changed the toggle navigation button should be removed or changed*/
+/*Navbar is the entire banner at the top of each page*/
+.navbar{  background-color: #002F5C ;  border-color: #000000;  border-width: 5px;  border-style: solid;  }
+/*The battleships icon*/
+.navbar-header {  text-align: left;  clear:none;}
+.navbar-brand{  color:#005B17;  font-family:Britannic;  text-decoration:none;  font-size:50px;}
+.container{}
+/*makes battleships change colour when hovering over it*/
+.navbar-brand:hover {  color:green;}
+/*for logout and lobby*/
+.nav {  list-style-type: none;  padding: 0px 100px 0px 100px;  font-size:35px;  font-family:Britannic;  position:absolute;  left: 200px;  top:25px;  text-decoration:none;  }
+.hz-list{  float:left;  padding: 0px 10px 0px 10px;}
+.hz-list:hover{  color:gray;}
+/*for the greetings message*/
+.navbar-text{  font-size:35px;  font-family:Britannic;  position:absolute;  left: 310px;  top:-9px;  text-decoration:underline;}
+/*for the register form*/
+.control-group{  font-family:Britannic;}
+/*for the tables if we use tables for representing the game*/
+.tab{  border:2px solid black;  border-collapse: collapse;  position:absolute;  top:300px;  left:200px;}
+.tab-own-board{    border:2px solid black;  border-collapse: collapse;  position: absolute;  top:300px;  left:500px;}
+.tab-r{  border:2px solid black;  padding:10px;}
+.tab-h{  border:2px solid black;  padding:10px;  background-color:blue;}
+/*to account for differences between the 2 displayed boards*/
+.tab-h-own-board{  border:2px solid black;  padding:10px;  background-color:blue;}
+/*change the colour of tiles that can be selected (if this is how the game is represented) and avoid changing for unselectable tiles*/
+.shot-tile{  background-color:red;}
+.missed-tile{  background-color:black;}
+.tab-h:hover{  background-color:green;}
+.missed-tile:hover{  background-color:black;}
+.shot-tile:hover{  background-color:red;}
