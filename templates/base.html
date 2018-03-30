@@ -4,19 +4,12 @@
 <head>
     <meta charset="UTF-8">
  
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-        crossorigin="anonymous">
  
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-        crossorigin="anonymous">
- 
-    <!-- LOCAL CSS 
-    <link rel="stylesheet" href="{% static "css/game.css " %}"> {% block additional_head %}{% endblock %}-->
+    <!-- removed preset css -->
+    <link rel="stylesheet" href="{% static "css/game.css " %}"> {% block additional_head %}{% endblock %}
 </head>
  
-<body style="padding-top:65px;">
+<body style="padding-top:15px; background-color: #008291">
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -31,11 +24,11 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     {% if request.user.is_authenticated %}
-                        <li><a href="/lobby/">Lobby</a></li>
-                        <li><a href="/logout/">Logout</a></li>
+                        <li class="hz-list"><a href="/lobby/">Lobby</a></li>
+                        <li class="hz-list"><a href="/logout/">Logout</a></li>
                     {% else %}
-                        <li><a href="/register/">Register</a></li>
-                        <li><a href="/login/">Login</a></li>
+                        <li class="hz-list"><a href="/register/">Register</a></li>
+                        <li class="hz-list"><a href="/login/">Login</a></li>
                     {% endif %}
                 </ul>
                 {% if request.user.is_authenticated %}
