@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block main_content %}
+<div class="row">
+    <div class="col-lg-12"> 
+        <h3>Login</h3>  
+        <hr>
+        {% if form.errors %}
+        <p class="text-danger">Your username and password didn't match. Please try again.</p>
+        {% endif %} 
+        <!--This page creates a form that when submitted should check if the username and password are correct and login the user-->
+        <form action="#" method="POST">  
+            {% csrf_token %}              
+            <fieldset>                
+            {% for field in form %}<!-- This lists all fields to be filled in -->    
+            {% if field.errors %}  <!-- If any errors with the field occurs then the problem will be displayed next the the field -->
+            <div class="control-group error">  
+                <label class="control-label">{{ field.label }}</label>   
+                <div class="controls">{{ field }}             
+                    <span class="help-inline text-danger">         
+                        {% for error in  field.errors %}{{ error }}{% endfor %}  
+                    </span>            
+                </div>                        
+            </div>                   
+            {% else %}             
+            <div class="control-group"> 
+                <label class="control-label">{{ field.label }}</label>    <!-- otherwise the field will be listed-->
+                <div class="controls">{{ field }}</div>           
+            </div>              
+            {% endif %}                
+            {% endfor %}               
+            </fieldset>             
+            <br>              
+            <div class="form-actions"> 
+                <button type="submit" class="btn btn-primary">Submit</button>  <!-- This button is used to submit the form -->
+            </div>       
+        </form>
+    </div>
+</div>
+{% endblock %}
