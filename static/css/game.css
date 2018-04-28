@@ -1,13 +1,15 @@
-/* version 3 */
+/* version 4 */
 div {   contentEditable: true;  clear:both; } 
 .navbar{  }
 .navbar-header {  text-align: left;  clear:none;}
-.navbar-brand{  padding: 0px 20% 0px 20%;  float:left;  color:#BFBFBF;  font-family:Britannic;  text-decoration:none;  font-size:50px;}/*The title*/
+.navbar-brand{  padding: 0px 20% 0px 20%;  float:left;  color:#7F7F7F;  font-family:Britannic;  text-decoration:none;  font-size:50px;}/*The title*/
 .container{}
-.navbar-brand:hover {  color:#7F7F7F;}
-.nav {  background-color: #7092BE ;  border-color: #7F7F7F;  border-width: 5px;  border-style: solid;  width:90%;  float:left;  clear:both;  text-align: center;  list-style-type: none;  padding: 0px 4.5% 0px 4.5%;  font-size:25px;  font-family:Britannic;  text-decoration:none;  } /*The Top Banner is coloured and positioned by this*/
-.hz-list{  color:#BFBFBF;  float:right;  padding: 2% 1% 0px 1%;} /*For Logout and Lobby or Login and  Register*/
-.hz-list:hover{  color:#7F7F7F;}
-.navbar-text{  white-space: nowrap;  color:#BFBFBF;  padding: 2% 3% 0px 1%;  font-size:25px;  font-family:Britannic;  float:left;  text-decoration:underline;}/*for the message to logged in users*/
+.navbar-brand:hover {  color:#3F3F3F;}
+.nav {  background: linear-gradient(#000000,#121212,#000000) ;  border-color: #7F7F7F;  border-width: 1px;  border-style: solid;  width:90%;  float:left;  clear:both;  text-align: center;  list-style-type: none;  padding: 0px 4.5% 0px 4.5%;  font-size:25px;  font-family:Britannic;  text-decoration:none;  } /*The Top Banner is coloured and positioned by this*/
+.hz-list{  color:#7F7F7;  float:right;  padding: 2% 1% 0px 1%;} /*For Logout and Lobby or Login and  Register*/
+.hz-list:hover{  color:#3F3F3F;}
+.navbar-text{  white-space: nowrap;  color:#7F7F7F;  padding: 2% 3% 0px 1%;  font-size:25px;  font-family:Britannic;  float:left;}/*for the message to logged in users*/
 .control-group{  font-family:Britannic;}
+table { cellspacing="0";}
+h3 {font-family:Britannic;}
 
